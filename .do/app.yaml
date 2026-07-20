@@ -1,0 +1,8 @@
+name: tornquist-portal
+static_sites:
+  - name: portal
+    github:
+      repo: TU_USUARIO/tornquist-portal
+      branch: main
+    source_dir: /
+    output_dir: /
