@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sistemas de Gestión · Planta Tornquist</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#3D5F26">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Tornquist">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/icons/favicon-48.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -27,6 +34,9 @@ body{margin:0;font-family:'Plus Jakarta Sans',Arial,sans-serif;background:var(--
 }
 .pill::before{content:"";width:6px;height:6px;border-radius:50%;background:#B7E28C}
 .chips-r{display:flex;align-items:center;gap:10px}
+.instalar{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);color:var(--green-ink);font-weight:700;font-size:12.5px;padding:8px 14px;border-radius:30px;text-decoration:none;box-shadow:0 2px 6px rgba(40,60,25,.06)}
+.instalar:hover{border-color:var(--green-2)}
+@media(display-mode:standalone){.instalar{display:none}}
 .circ{
   width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid var(--line);
   display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(40,60,25,.06);
@@ -173,6 +183,7 @@ footer{text-align:center;font-size:11.5px;color:var(--muted);padding:22px 0 4px}
   <div class="toprow">
     <span class="pill">SISTEMAS DE GESTIÓN DE PLANTA</span>
     <div class="chips-r">
+      <a class="instalar" id="btnInstalar" href="/instalar.html">📲 Instalar en el celular</a>
       <div class="circ" title="Papelera del Sur">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#548235" stroke-width="1.8"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="#548235" stroke-width="1.8" stroke-linecap="round"/></svg>
       </div>
@@ -305,5 +316,14 @@ footer{text-align:center;font-size:11.5px;color:var(--muted);padding:22px 0 4px}
 
   <footer>Planta Tornquist · Papelera del Sur — Grupo H. Koch · Seguridad, TPM y Mejora Continua, todos los días</footer>
 </div>
+<script>
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(function(){});
+  // Chrome: si se puede instalar, el botón instala directo; si no, lleva a las instrucciones
+  var _pedido = null;
+  window.addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); _pedido = e; });
+  document.getElementById('btnInstalar').addEventListener('click', function(ev){
+    if (_pedido) { ev.preventDefault(); _pedido.prompt(); _pedido.userChoice.finally(function(){ _pedido = null; }); }
+  });
+</script>
 </body>
 </html>

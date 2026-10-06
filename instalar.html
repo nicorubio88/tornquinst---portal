@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instalar la app · Planta Tornquist</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#3D5F26">
+<link rel="icon" type="image/png" href="/icons/favicon-48.png">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--g:#548235;--gi:#3D5F26;--gs:#E7F2DC;--ink:#20291F;--mut:#6C7A67;--line:#E7ECDF;--bg:#F5F8F0;--am:#8A5A0A;--ams:#FDF0DC;--r:#B3261E;--rs:#FBE4E2}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Plus Jakarta Sans',Arial,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:22px 16px 60px}
+.top{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.top img{width:56px;height:56px;border-radius:14px}
+h1{font-size:23px;margin:0;line-height:1.2}
+.sub{color:var(--mut);font-size:14px;margin:2px 0 0}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;margin:12px 0;box-shadow:0 2px 8px rgba(40,60,25,.05)}
+.card h2{font-size:16px;margin:0 0 4px;display:flex;align-items:center;gap:8px}
+.tag{font-size:11px;font-weight:800;letter-spacing:.04em;padding:3px 9px;border-radius:20px;background:var(--gs);color:var(--gi)}
+.card p{margin:6px 0;color:#3b4537;font-size:14px;line-height:1.55}
+ol{margin:8px 0 0;padding-left:20px;font-size:14px;line-height:1.7}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,var(--g),var(--gi));color:#fff;text-decoration:none;border:0;
+  font:700 15px 'Plus Jakarta Sans',Arial;padding:13px 18px;border-radius:14px;margin-top:10px;cursor:pointer;width:100%}
+.btn.sec{background:#fff;color:var(--gi);border:2px solid var(--g)}
+.aviso{border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.5;margin:12px 0}
+.aviso.am{background:var(--ams);color:var(--am)} .aviso.r{background:var(--rs);color:var(--r)}
+.mini{font-size:12px;color:var(--mut)}
+.qr{display:flex;gap:14px;align-items:center}
+.qr img{width:120px;height:120px;border:1px solid var(--line);border-radius:10px}
+.oculto{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><img src="/icons/icon-192.png" alt=""><div><h1>Instalar la app en el celular</h1>
+    <p class="sub">EHS, Tarjetas TPM y Causa Raíz de Planta Tornquist con un ícono en la pantalla de inicio.</p></div></div>
+
+  <div id="avisoSamsung" class="aviso r oculto">
+    <b>Estás en el navegador de Samsung.</b> Si instalás desde acá, Android muestra
+    "Aplicación no segura bloqueada" porque Samsung arma la app para una versión vieja de Android.
+    Abrí esta página en <b>Chrome</b> (botón de abajo) o descargá el APK de la opción 2.
+    <a class="btn" id="abrirChrome" href="#">Abrir en Chrome</a>
+  </div>
+  <div id="avisoInstalada" class="aviso am oculto">✔ La app ya está instalada en este dispositivo.</div>
+
+  <div class="card">
+    <h2>1 · Con Chrome <span class="tag">RECOMENDADA</span></h2>
+    <p>La instala Chrome con firma de Google: no aparece ninguna advertencia y se actualiza sola.</p>
+    <button class="btn" id="btnChrome">📲 Instalar ahora</button>
+    <ol id="pasosChrome">
+      <li>Abrí <b>coral-app-gpzhd.ondigitalocean.app</b> en <b>Chrome</b>.</li>
+      <li>Tocá el menú <b>⋮</b> (arriba a la derecha) → <b>Instalar app</b> (o "Agregar a la pantalla principal" → <b>Instalar</b>).</li>
+      <li>Confirmá. Aparece el ícono <b>Tornquist</b> en el celular.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>2 · Descargar el APK <span class="tag" style="background:#E6ECFA;color:#2E4470">ANDROID 7 A 16</span></h2>
+    <p>App de Android compilada para la versión más nueva (Android 16). Útil si no usan Chrome o para instalar en celulares de la planta sin cuenta de Google.</p>
+    <a class="btn sec" href="/descargas/Sistemas-Tornquist.apk" download>⬇ Descargar Sistemas-Tornquist.apk</a>
+    <ol>
+      <li>Abrí el archivo descargado. Si Android pregunta, permití <b>"Instalar apps desconocidas"</b> para el navegador.</li>
+      <li>Si Play Protect ofrece <b>"Analizar app"</b>, aceptá: es una app interna sin publicar en Play Store.</li>
+      <li>Tocá <b>Instalar</b>.</li>
+    </ol>
+    <p class="mini">Paquete ar.com.papeleradelsur.tornquist · firmado por Papelera del Sur – Planta Tornquist.</p>
+  </div>
+
+  <div class="card">
+    <h2>3 · iPhone</h2>
+    <ol><li>Abrí la página en <b>Safari</b>.</li><li>Tocá <b>Compartir</b> (cuadrado con flecha) → <b>Agregar a pantalla de inicio</b>.</li></ol>
+  </div>
+
+  <div class="card qr">
+    <img src="/icons/qr-instalar.png" alt="QR">
+    <div><b>Compartir</b><p class="mini">Escaneá este código con otro celular para abrir esta página.</p>
+      <a class="mini" href="/">← Volver a los sistemas</a></div>
+  </div>
+</div>
+<script>
+  var ua = navigator.userAgent || '';
+  var standalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+  if (standalone) document.getElementById('avisoInstalada').classList.remove('oculto');
+  if (/SamsungBrowser/i.test(ua)) {
+    document.getElementById('avisoSamsung').classList.remove('oculto');
+    document.getElementById('abrirChrome').href = 'intent://' + location.host + '/instalar.html#Intent;scheme=https;package=com.android.chrome;end';
+  }
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(function(){});
+  var pedido = null, b = document.getElementById('btnChrome');
+  b.style.display = 'none';
+  window.addEventListener('beforeinstallprompt', function(e){ e.preventDefault(); pedido = e; b.style.display = ''; });
+  b.addEventListener('click', function(){ if (!pedido) return; pedido.prompt(); pedido.userChoice.finally(function(){ pedido = null; b.style.display = 'none'; }); });
+  window.addEventListener('appinstalled', function(){ document.getElementById('avisoInstalada').classList.remove('oculto'); });
+</script>
+</body>
+</html>

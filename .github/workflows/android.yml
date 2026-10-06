@@ -1,0 +1,39 @@
+name: App Android (APK)
+on:
+  push:
+    branches: [main]
+    paths: ['twa/**', '.github/workflows/android.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '17' }
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: Esperar a que el portal publique los iconos
+        run: |
+          for i in $(seq 1 40); do curl -sf -o /dev/null https://coral-app-gpzhd.ondigitalocean.app/icons/icon-maskable-512.png && exit 0; sleep 15; done; exit 1
+      - name: Compilar APK
+        run: |
+          set -o pipefail
+          mkdir -p descargas/sin-firmar
+          {
+            yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0" > /dev/null
+            cd twa && npm i --no-save @bubblewrap/core@1.25.0 && node build.js && cd android
+            chmod +x gradlew && ./gradlew assembleRelease --no-daemon --stacktrace
+            cd ../..
+            "$ANDROID_HOME/build-tools/36.0.0/zipalign" -p -f 4 twa/android/app/build/outputs/apk/release/app-release-unsigned.apk descargas/sin-firmar/Sistemas-Tornquist-sin-firmar.apk
+            "$ANDROID_HOME/build-tools/36.0.0/aapt2" dump badging descargas/sin-firmar/Sistemas-Tornquist-sin-firmar.apk | head -20
+          } 2>&1 | tee descargas/sin-firmar/build.log
+      - name: Guardar APK sin firmar (y el registro)
+        if: always()
+        run: |
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add -f descargas/sin-firmar/
+          git commit -m "APK sin firmar ($GITHUB_RUN_NUMBER) [skip ci]" || exit 0
+          git push
