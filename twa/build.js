@@ -1,5 +1,7 @@
 // Genera el proyecto Android (Trusted Web Activity) a partir de twa-manifest.json con Bubblewrap.
-const { TwaManifest, TwaGenerator, ConsoleLog } = require('@bubblewrap/core');
+const { TwaManifest, TwaGenerator, ConsoleLog, fetchUtils } = require('@bubblewrap/core');
+// fetch-h2 falla con la cookie que pone DigitalOcean (dominio ondigitalocean.app): se usa node-fetch
+fetchUtils.setFetchEngine('node-fetch');
 const cfg = require('./twa-manifest.json');
 (async () => {
   const m = new TwaManifest(cfg);
