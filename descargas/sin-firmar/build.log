@@ -7,22 +7,100 @@ added 265 packages in 10s
 
 39 packages are looking for funding
   run `npm fund` for details
-/home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/tough-cookie/lib/cookie.js:1187
-        err = new Error("Cookie has domain set to a public suffix");
-              ^
+Proyecto Android generado en twa/android
+Downloading https://services.gradle.org/distributions/gradle-8.11.1-bin.zip
+..................................................................................................................................
 
-Error: Cookie has domain set to a public suffix
-    at CookieJar.setCookie (/home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/tough-cookie/lib/cookie.js:1187:15)
-    at CookieJar.setCookie (/home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/universalify/index.js:5:67)
-    at /home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/fetch-h2/dist/lib/cookie-jar.js:14:23
-    at new Promise (<anonymous>)
-    at CookieJar.setCookie (/home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/fetch-h2/dist/lib/cookie-jar.js:13:16)
-    at /home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/fetch-h2/dist/lib/cookie-jar.js:22:55
-    at Array.map (<anonymous>)
-    at CookieJar.setCookies (/home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/fetch-h2/dist/lib/cookie-jar.js:22:36)
-    at /home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/fetch-h2/dist/lib/fetch-http2.js:148:39
-    at ClientHttp2Stream.<anonymous> (/home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/callguard/dist/index.js:38:29)
+Welcome to Gradle 8.11.1!
 
-Node.js v20.20.2
-chmod: cannot access 'gradlew': No such file or directory
-Unable to open 'twa/android/app/build/outputs/apk/release/app-release-unsigned.apk' as zip archive: No such file or directory
+Here are the highlights of this release:
+ - Parallel load and store for Configuration Cache
+ - Java compilation errors at the end of the build output
+ - Consolidated report for warnings and deprecations
+
+For more details see https://docs.gradle.org/8.11.1/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:generateShorcutsFile UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders
+> Task :app:mergeReleaseNativeLibs NO-SOURCE
+> Task :app:stripReleaseDebugSymbols NO-SOURCE
+> Task :app:extractReleaseNativeSymbolTables NO-SOURCE
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:javaPreCompileRelease
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:checkReleaseAarMetadata
+> Task :app:generateReleaseResValues
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:generateReleaseResources
+> Task :app:packageReleaseResources
+> Task :app:mergeReleaseResources
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease
+> Task :app:parseReleaseLocalResources
+
+> Task :app:processReleaseMainManifest
+package="ar.com.papeleradelsur.tornquist" found in source AndroidManifest.xml: /home/runner/work/tornquinst---portal/tornquinst---portal/twa/android/app/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="ar.com.papeleradelsur.tornquist" from the source AndroidManifest.xml: /home/runner/work/tornquinst---portal/tornquinst---portal/twa/android/app/src/main/AndroidManifest.xml.
+
+> Task :app:processReleaseManifest
+> Task :app:processReleaseManifestForPackage
+> Task :app:mergeReleaseArtProfile
+> Task :app:extractProguardFiles
+> Task :app:processReleaseJavaRes NO-SOURCE
+> Task :app:mergeReleaseStartupProfile
+> Task :app:mergeReleaseShaders
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets
+> Task :app:compressReleaseAssets
+> Task :app:processReleaseResources
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:mergeReleaseJavaResource
+> Task :app:compileReleaseJavaWithJavac
+> Task :app:mergeReleaseGeneratedProguardFiles
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:writeReleaseAppMetadata
+> Task :app:optimizeReleaseResources
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:expandReleaseArtProfileWildcards
+> Task :app:minifyReleaseWithR8
+> Task :app:compileReleaseArtProfile
+> Task :app:packageRelease
+> Task :app:createReleaseApkListingFileRedirect
+> Task :app:assembleRelease
+[Incubating] Problems report is available at: file:///home/runner/work/tornquinst---portal/tornquinst---portal/twa/android/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 8s
+36 actionable tasks: 36 executed
+package: name='ar.com.papeleradelsur.tornquist' versionCode='1' versionName='1.0.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+minSdkVersion:'24'
+targetSdkVersion:'36'
+uses-permission: name='ar.com.papeleradelsur.tornquist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+application-label:'Sistemas de Gestión · Planta Tornquist'
+application-label-af:'Sistemas de Gestión · Planta Tornquist'
+application-label-am:'Sistemas de Gestión · Planta Tornquist'
+application-label-ar:'Sistemas de Gestión · Planta Tornquist'
+application-label-as:'Sistemas de Gestión · Planta Tornquist'
+application-label-az:'Sistemas de Gestión · Planta Tornquist'
+application-label-be:'Sistemas de Gestión · Planta Tornquist'
+application-label-bg:'Sistemas de Gestión · Planta Tornquist'
+application-label-bn:'Sistemas de Gestión · Planta Tornquist'
+application-label-bs:'Sistemas de Gestión · Planta Tornquist'
+application-label-ca:'Sistemas de Gestión · Planta Tornquist'
+application-label-cs:'Sistemas de Gestión · Planta Tornquist'
+application-label-da:'Sistemas de Gestión · Planta Tornquist'
+application-label-de:'Sistemas de Gestión · Planta Tornquist'
+application-label-el:'Sistemas de Gestión · Planta Tornquist'
+application-label-en-AU:'Sistemas de Gestión · Planta Tornquist'
