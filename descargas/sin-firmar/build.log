@@ -1,1 +1,28 @@
-yes: standard output: Broken pipe
+npm warn deprecated phin@3.7.1: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm warn deprecated google-p12-pem@3.1.4: Package is no longer maintained
+npm warn deprecated @types/gapi.client.androidpublisher@3.0.2: use @types/gapi.client.androidpublisher-v3 instead; see https://github.com/Maxim-Mazurok/google-api-typings-generator/issues/652 for details
+npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+
+added 265 packages in 10s
+
+39 packages are looking for funding
+  run `npm fund` for details
+/home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/tough-cookie/lib/cookie.js:1187
+        err = new Error("Cookie has domain set to a public suffix");
+              ^
+
+Error: Cookie has domain set to a public suffix
+    at CookieJar.setCookie (/home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/tough-cookie/lib/cookie.js:1187:15)
+    at CookieJar.setCookie (/home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/universalify/index.js:5:67)
+    at /home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/fetch-h2/dist/lib/cookie-jar.js:14:23
+    at new Promise (<anonymous>)
+    at CookieJar.setCookie (/home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/fetch-h2/dist/lib/cookie-jar.js:13:16)
+    at /home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/fetch-h2/dist/lib/cookie-jar.js:22:55
+    at Array.map (<anonymous>)
+    at CookieJar.setCookies (/home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/fetch-h2/dist/lib/cookie-jar.js:22:36)
+    at /home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/fetch-h2/dist/lib/fetch-http2.js:148:39
+    at ClientHttp2Stream.<anonymous> (/home/runner/work/tornquinst---portal/tornquinst---portal/twa/node_modules/callguard/dist/index.js:38:29)
+
+Node.js v20.20.2
+chmod: cannot access 'gradlew': No such file or directory
+Unable to open 'twa/android/app/build/outputs/apk/release/app-release-unsigned.apk' as zip archive: No such file or directory
