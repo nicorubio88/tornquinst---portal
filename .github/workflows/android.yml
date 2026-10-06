@@ -17,7 +17,7 @@ jobs:
         with: { node-version: '20' }
       - name: Esperar a que el portal publique los iconos
         run: |
-          for i in $(seq 1 40); do curl -sf -o /dev/null https://coral-app-gpzhd.ondigitalocean.app/icons/icon-maskable-512.png && exit 0; sleep 15; done; exit 1
+          for i in $(seq 1 40); do curl -sf -o /dev/null https://coral-app-gpzhd.ondigitalocean.app/icons/logo-maskable-512.png && exit 0; sleep 15; done; exit 1
       - name: Compilar APK
         run: |
           set -o pipefail

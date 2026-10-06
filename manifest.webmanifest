@@ -8,16 +8,16 @@
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#F5F8F0",
+  "background_color": "#FFFFFF",
   "theme_color": "#3D5F26",
   "icons": [
-    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "/icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
-    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "/icons/logo-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/logo-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/logo-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/logo-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "shortcuts": [
-    { "name": "Cargar tarjeta TPM", "short_name": "Tarjeta", "url": "https://seal-app-27qrt.ondigitalocean.app/formulario.html", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] },
-    { "name": "Seguridad (EHS)", "short_name": "EHS", "url": "https://ehs-tornquist-v2-kfwf9.ondigitalocean.app/", "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }] }
+    { "name": "Cargar tarjeta TPM", "short_name": "Tarjeta", "url": "https://seal-app-27qrt.ondigitalocean.app/formulario.html", "icons": [{ "src": "/icons/logo-192.png", "sizes": "192x192" }] },
+    { "name": "Seguridad (EHS)", "short_name": "EHS", "url": "https://ehs-tornquist-v2-kfwf9.ondigitalocean.app/", "icons": [{ "src": "/icons/logo-192.png", "sizes": "192x192" }] }
   ]
 }
