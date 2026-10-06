@@ -23,7 +23,7 @@ jobs:
           set -o pipefail
           mkdir -p descargas/sin-firmar
           {
-            yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0" > /dev/null
+            (yes 2>/dev/null || true) | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0" > /dev/null || true
             cd twa && npm i --no-save @bubblewrap/core@1.25.0 && node build.js && cd android
             chmod +x gradlew && ./gradlew assembleRelease --no-daemon --stacktrace
             cd ../..
